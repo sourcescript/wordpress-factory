@@ -6,9 +6,9 @@
 	{
 		private static $loader 	=	 null;
 		private static $twig 	= 	 null;
-
-
 		private static $twigInstance = null;
+
+		private $filepath = "";
 
 		public function __construct($config = array(), $twigInstance = null)
 		{
@@ -28,23 +28,31 @@
 			return self::$twig;
 		}
 
+		public function getPath()
+		{
+			return $this->filepath;
+		}
+
+		public function setPath($path)
+		{
+			$this->filepath = $path;
+			return $this;
+		}
+
+
 		public static function make($file)
 		{
 
-			$file 		= base_path()."/views/".$file;
 			$viewCore 	= ViewCore::getSettings();
 			$instance = new ViewCore($viewCore,  self::getTwig());
-
-			$instance->twigInstance->loadTemplate($file);
-
-
+			$instance->setPath($file);
 			return $instance;
 		}
 
 		public function load($array = array())
 		{
 
-			return $this->twigInstance->render($array);
+			return $this->twigInstance->render($this->getPath(), $array);
 		}
 
 	}

@@ -16,6 +16,8 @@
 		{
 			parent::__construct($coreSettings);
 			$this->pageActions();
+
+			\Assets\AdminAsset::load()->queue();
 		}
 
 		public function pageActions()
