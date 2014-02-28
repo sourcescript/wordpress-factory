@@ -28,37 +28,86 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <h1>
+<a name="wordpress-factory" class="anchor" href="#wordpress-factory"><span class="octicon octicon-link"></span></a>wordpress-factory</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h1>
+<a name="inspiration" class="anchor" href="#inspiration"><span class="octicon octicon-link"></span></a>Inspiration</h1>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Its very hard for Object-Oriented Developers (Or Developers who uses MVC Frameworks) to develop wordpress plugins due to the difference on the framework and platform. So, i created this little bootstrap framework that would easily help developers to create their own plugin easily.</p>
+
+<h2>
+<a name="components-added" class="anchor" href="#components-added"><span class="octicon octicon-link"></span></a>components added</h2>
+
+<pre><code>-Twig
+-Autoloader
+-probably eloquent? or a good schema builder
+-storage
+-base_path()
+-cache_path()
+-storage_path()
+-dd()
+-a well fixed documentation
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h1>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h1>
+
+<p>You could easily install the plugin plainly. Each component requires a <code>config.php</code>. Since this is a pre-beta plugin framework, there are a little bit of <code>offf-issues</code></p>
+
+<h2>
+<a name="file-structure" class="anchor" href="#file-structure"><span class="octicon octicon-link"></span></a>File Structure</h2>
+
+<p>The File structure is composed of the <code>Core</code> class.</p>
+
+<pre><code>-functions/classes/Core
+-functions/classes/Options
+</code></pre>
+
+<p>Each class requires its own <code>config.php</code> that is found depending on its namespace. for example, <code>\Core\Core</code> has its <code>config.php</code> on <code>config\Core\Core\config.php</code></p>
+
+<h2>
+<a name="initialization" class="anchor" href="#initialization"><span class="octicon octicon-link"></span></a>Initialization</h2>
+
+<p>initialization or bootstrapping happened under <code>functions.php</code> and autoloads each objects with the use of <code>CADBootstrap</code>.</p>
+
+<h2>
+<a name="basic-example" class="anchor" href="#basic-example"><span class="octicon octicon-link"></span></a>Basic Example</h2>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="generating-a-view-component" class="anchor" href="#generating-a-view-component"><span class="octicon octicon-link"></span></a>Generating A View Component</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Generating a Views Component is as easy as generating it in your own favorite frameworks. With the use of Twig Templating Engine, Wordpress Factory can generate a template easy as</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<div class="highlight highlight-php"><pre><span class="k">echo</span> <span class="nx">\Core\ViewCore</span><span class="o">::</span><span class="na">make</span><span class="p">(</span><span class="s1">'options/options.tpl'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">load</span><span class="p">();</span>
+</pre></div>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The Views folder houses all required fields</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="queueing-and-registering-scripts" class="anchor" href="#queueing-and-registering-scripts"><span class="octicon octicon-link"></span></a>Queueing and Registering scripts</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<div class="highlight highlight-php"><pre><span class="nx">\Assets\AdminAsset</span><span class="o">::</span><span class="na">load</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">queue</span><span class="p">();</span> <span class="c1">//for backend</span>
+<span class="nx">\Assets\FrontAsset</span><span class="o">::</span><span class="na">load</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">queue</span><span class="p">();</span> <span class="c1">//for Frontend</span>
+</pre></div>
+
+<h3>
+<a name="with-config-php" class="anchor" href="#with-config-php"><span class="octicon octicon-link"></span></a>With Config Php</h3>
+
+<h4>
+<a name="creating-an-options-page" class="anchor" href="#creating-an-options-page"><span class="octicon octicon-link"></span></a>Creating an Options Page</h4>
+
+<p>There is already an options page generated in <code>functions\classes\Options\Page\OptionsPage</code></p>
+
+<div class="highlight highlight-php"><pre><span class="c1">//notice that the optionspage already extended \Core\Core to have the generic requirements of the plugins page</span>
+
+<span class="k">public</span> <span class="k">function</span> <span class="nf">init</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">is_admin</span><span class="p">())</span> <span class="p">{</span>
+        <span class="nx">self</span><span class="o">::</span><span class="na">factorize</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
         </section>
 
         <aside id="sidebar">
