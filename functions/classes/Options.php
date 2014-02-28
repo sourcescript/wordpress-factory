@@ -3,6 +3,8 @@
 	{
 		public static function getOptions()
 		{
-			return get_option('hourfamilytx');
+			$coreInstance = Core\Core::instance();
+
+			return get_option($coreInstance->get('option_name'));
 		}
 	}

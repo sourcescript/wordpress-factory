@@ -1,5 +1,6 @@
 <?php
-	class CADBootstrap {
+	class CADBootstrap 
+	{
 		public static function make()
 		{
 			spl_autoload_register(function($className)
@@ -14,5 +15,11 @@
 			});
 		}
 	}
+
+	function base_path()
+	{
+		return dirname(__FILE__);
+	}
+
 
 	

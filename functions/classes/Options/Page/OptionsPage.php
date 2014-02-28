@@ -2,21 +2,21 @@
 	
 	namespace Options\Page;
 
-	class OptionsPage
+	class OptionsPage extends \Core\Core
 	{
 
 		public function init()
 		{
 			if(is_admin()) {
-				return new OptionsPage;
+				self::factorize();
 			}
 		}
 
-		public function __construct()
+		public function __construct($coreSettings = array())
 		{
+			parent::__construct($coreSettings);
 			$this->pageActions();
 		}
-
 
 		public function pageActions()
 		{
@@ -28,12 +28,12 @@
 		//----------------------------/
 
 		public function displayPluginsPage()
-		{
+		{	
 			$settings = add_options_page(
-					'HourFamilyTX Settings',
-					'HourFamilyTX Settings',
-					'manage_options',
-					'hourfamilytx-settings-admin',
+					$this->get('option_name'),
+					$this->get('option_title'),
+					$this->get('option_use'),
+					$this->get('option_slug'),
 					array($this, 'createAdminPage')
 				);
 		}

@@ -4,6 +4,7 @@
 	function bootstrap()
 	{
 		CADBootstrap::make();
+		Core\Core::factorize();
 		Options\Page\OptionsPage::init();
 	}
 
