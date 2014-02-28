@@ -17,9 +17,20 @@ class __TwigTemplate_8b062171f6133af4b8ec188f105e88d4de6478023308693214ad4dc7f8a
     {
         // line 1
         echo "<div class='wrap'>
-\t<div class='updated'>
-\t\t<p><span class='dashicons dashicons-admin-tools'></span>&nbsp;Test
-\t</div>
+\t <h2>HourFamilyTX System Settings</h2>
+\t <ul class='nav nav-tabs'>
+\t \t<li class='active'>
+\t \t\t<a href='#system-basic-settings' data-toggle='tab'>
+\t \t\t\t<span class='glyphicon glyphicon-cog'></span>&nbsp;Basic Settings
+\t \t\t</a>
+\t \t</li>
+\t </ul>
+\t <form method='post' action='options.php'>
+\t \t<div class='tab-content'>
+\t \t\t<div class='tab-pane active' id='system-basic-settings'>
+\t \t\t</div>
+\t \t</div>
+\t </form>
 </div>";
     }
 

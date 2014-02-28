@@ -31,6 +31,14 @@
 	{
 		return storage_path()."/cache";
 	}
+	function base_url()
+	{
+		return site_url('/');
+	}
+	function plugin_url()
+	{
+		return plugins_url().'/wordpress-factory/';
+	}
 	function dd($value)
 	{
 		var_dump($value);

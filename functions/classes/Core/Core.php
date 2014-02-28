@@ -31,8 +31,10 @@
 			if(count($coreSettings) == 0) {
 				$path = base_path()."/config/{$class}/config.php";
 				$path = str_replace("\\", "/", $path);
-
-				$coreSettings = include $path;
+				
+				if(file_exists($path)) {
+					$coreSettings = include $path;
+				}
 			}
 
 			return new $class($coreSettings);
