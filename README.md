@@ -4,7 +4,7 @@ wordpress-factory
 #Inspiration
 Its very hard for Object-Oriented Developers (Or Developers who uses MVC Frameworks) to develop wordpress plugins due to the difference on the framework and platform. So, i created this little bootstrap framework that would easily help developers to create their own plugin easily.
 
-##comonents added
+##components added
 	-Twig
 	-Autoloader
 	-probably eloquent? or a good schema builder
@@ -13,6 +13,7 @@ Its very hard for Object-Oriented Developers (Or Developers who uses MVC Framewo
 	-cache_path()
 	-storage_path()
 	-dd()
+	-a well fixed documentation
 
 
 #Installation
