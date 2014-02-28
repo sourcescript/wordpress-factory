@@ -35,7 +35,7 @@ initialization or bootstrapping happened under ```functions.php``` and autoloads
 ####Creating an Options Page
 There is already an options page generated in ```functions\classes\Options\Page\OptionsPage```
 
-```
+```php
 //notice that the optionspage already extended \Core\Core to have the generic requirements of the plugins page
 
 public function init()
