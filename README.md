@@ -31,6 +31,16 @@ Each class requires its own ```config.php``` that is found depending on its name
 initialization or bootstrapping happened under ```functions.php``` and autoloads each objects with the use of ```CADBootstrap```.
 
 ##Basic Example
+###Generating A View Component
+Generating a Views Component is as easy as generating it in your own favorite frameworks. With the use of Twig Templating Engine, Wordpress Factory can generate a template easy as
+```php
+echo \Core\ViewCore::make('options/options.tpl')->load();
+```
+The Views folder houses all required fields
+###Queueing and Registering scripts
+```php
+\Assets\AdminAsset::load()->queue();
+```
 ###With Config Php
 ####Creating an Options Page
 There is already an options page generated in ```functions\classes\Options\Page\OptionsPage```
