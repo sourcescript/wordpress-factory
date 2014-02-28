@@ -8,7 +8,6 @@
 		 * Includes the options page name, and the options page namespace
 		 */
 		private $coreSettings = array();
-
 		/*
 		 * The Core Instance of the wordpress plugin
 		 */
@@ -62,6 +61,14 @@
 		{
 			$this->coreSettings[$instanceName] = $value;
 			return $this->get($instanceName);
+		}
+
+		/*
+		 * Get the whole instance settings
+		 */
+		public function getSettings()
+		{
+			return $this->coreSettings;
 		}
 
 	}

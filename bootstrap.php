@@ -13,12 +13,23 @@
 			    	include_once($class);
 				}
 			});
+			\Core\ViewCore::register();
 		}
 	}
 
 	function base_path()
 	{
 		return dirname(__FILE__);
+	}
+
+	function storage_path()
+	{
+		return base_path()."/storage";
+	}
+
+	function cache_path()
+	{
+		return storage_path()."/cache";
 	}
 
 
