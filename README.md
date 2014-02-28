@@ -39,7 +39,8 @@ echo \Core\ViewCore::make('options/options.tpl')->load();
 The Views folder houses all required fields
 ###Queueing and Registering scripts
 ```php
-\Assets\AdminAsset::load()->queue();
+\Assets\AdminAsset::load()->queue(); //for backend
+\Assets\FrontAsset::load()->queue(); //for Frontend
 ```
 ###With Config Php
 ####Creating an Options Page
