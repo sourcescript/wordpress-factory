@@ -31,6 +31,11 @@
 	{
 		return storage_path()."/cache";
 	}
+	function dd($value)
+	{
+		var_dump($value);
+		die();
+	}
 
 
 	

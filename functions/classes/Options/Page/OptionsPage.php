@@ -46,5 +46,6 @@
 		public function createAdminPage()
 		{
 			$options = \Options::getOptions();
+			echo \Core\ViewCore::make('options/options.tpl')->load();
 		}
 	}

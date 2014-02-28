@@ -31,6 +31,7 @@
 			if(count($coreSettings) == 0) {
 				$path = base_path()."/config/{$class}/config.php";
 				$path = str_replace("\\", "/", $path);
+
 				$coreSettings = include $path;
 			}
 
@@ -66,9 +67,17 @@
 		/*
 		 * Get the whole instance settings
 		 */
-		public function getSettings()
+		public static function getSettings()
 		{
-			return $this->coreSettings;
+			$class = get_called_class();
+
+			if(count($coreSettings) == 0) {
+				$path = base_path()."/config/{$class}/config.php";
+				$path = str_replace("\\", "/", $path);
+				// echo $path;
+				$coreSettings = include $path;
+			}
+			return $coreSettings;
 		}
 
 	}
