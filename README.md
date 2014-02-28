@@ -9,8 +9,9 @@ You could easily install the plugin plainly. Each component requires a ```config
 
 ##File Structure
 The File structure is composed of the ```Core``` class.
-```functions/classes/Core```
-```functions/classes/Options```
+
+	-functions/classes/Core
+	-functions/classes/Options
 
 Each class requires its own ```config.php``` that is found depending on its namespace. for example, ```\Core\Core``` has its ```config.php``` on ```config\Core\Core\config.php```
 
@@ -20,7 +21,8 @@ initialization or bootstrapping happened under ```functions.php``` and autoloads
 ##Basic Example
 ###With Config Php
 ####Creating an Options Page
-There is already an options page generated in ```functions\classes\Options\Page\OptionsPage```. 
+There is already an options page generated in ```functions\classes\Options\Page\OptionsPage```
+
 ```
 //notice that the optionspage already extended \Core\Core to have the generic requirements of the plugins page
 
