@@ -1,0 +1,14 @@
+{
+    "name": "lightshire/wordpress-factory",
+    "description": "A BoilerPlate plugin for wordpress plugin development",
+    "authors": [
+        {
+            "name": "Sourcescript",
+            "email": "giansantillan18@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "sourcescript/wf-core-framework": "dev-master"
+    }
+}
