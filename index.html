@@ -69,14 +69,27 @@ all you have to do is</p>
 </pre></div>
 
 <h1>
-<a name="adding-more-packages" class="anchor" href="#adding-more-packages"><span class="octicon octicon-link"></span></a>Adding more packages</h1>
+<a name="asset-loading" class="anchor" href="#asset-loading"><span class="octicon octicon-link"></span></a>Asset Loading</h1>
 
-<p>You may add your own packages with the use of composer. After downloading the composer file you may easily autoload it with <code>app.php</code> just add your folder like so.</p>
+<p>Getting tedious and irritated with having to load alot of wp_enqueue_stlye or wp_enqueue_scripts? Now you don't have to all you have to do is load</p>
 
-<div class="highlight highlight-php"><pre>    <span class="s1">'libs'</span>  <span class="o">=&gt;</span> <span class="k">array</span><span class="p">(</span>
-            <span class="s1">'MyLib'</span>         <span class="o">=&gt;</span> <span class="nx">base_path</span><span class="p">()</span><span class="o">.</span><span class="s1">'/../vendor/sourcescript/wf-core-framework/src'</span><span class="p">,</span> <span class="c1">//add your own file</span>
-        <span class="p">),</span>
+<div class="highlight highlight-php"><pre><span class="nx">Asset</span><span class="o">::</span><span class="na">factorize</span><span class="p">(</span><span class="s1">'back'</span><span class="p">,</span><span class="s1">'styles'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">queue</span><span class="p">();</span>  <span class="c1">// for back end scripts </span>
+<span class="c1">//and</span>
+<span class="nx">Asset</span><span class="o">::</span><span class="na">factorize</span><span class="p">(</span><span class="s1">'back'</span><span class="p">,</span><span class="s1">'scripts'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">queue</span><span class="p">();</span> <span class="c1">// for back end styles</span>
 </pre></div>
+
+<p>You are required two parameters <code>loc</code> and <code>type</code> consecutively, each will load separate config files depending on what you need. the following examples shall load </p>
+
+<pre lang="config\back_styles_assets.php```"><code>and
+```config\back-scripts_assets.php```
+the format you are required to have is &lt;loc&gt;_&lt;type&gt;_assets.php
+#Adding more packages
+You may add your own packages with the use of composer. After downloading the composer file you may easily autoload it with ```app.php``` just add your folder like so.
+```php
+    'libs'  =&gt; array(
+            'MyLib'         =&gt; base_path().'/../vendor/sourcescript/wf-core-framework/src', //add your own file
+        ),
+</code></pre>
 
 <h1>
 <a name="made-with-love-using" class="anchor" href="#made-with-love-using"><span class="octicon octicon-link"></span></a>Made With Love Using</h1>
