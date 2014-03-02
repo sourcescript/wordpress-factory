@@ -13,4 +13,6 @@
 
 
 	\Core\Core::make($config)->init();
-	OptionsPage::make()->load();
+	if(is_admin()) {
+		OptionsPage::make()->load();
+	}

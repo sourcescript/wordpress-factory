@@ -25,7 +25,19 @@ You may add parameters
 ```php
 	echo View::factorize('options/options.html.twig')->load(['title'=>'Options Title', 'content'=>'content']);
 ```
+#Asset Loading
+Getting tedious and irritated with having to load alot of wp_enqueue_stlye or wp_enqueue_scripts? Now you don't have to all you have to do is load
+```php
+Asset::factorize('back','styles')->queue();  // for back end scripts 
+//and
+Asset::factorize('back','scripts')->queue(); // for back end styles
+```
+You are required two parameters ```loc``` and ```type``` consecutively, each will load separate config files depending on what you need. the following examples shall load 
 
+```config\back_styles_assets.php```
+and
+```config\back-scripts_assets.php```
+the format you are required to have is <loc>_<type>_assets.php
 #Adding more packages
 You may add your own packages with the use of composer. After downloading the composer file you may easily autoload it with ```app.php``` just add your folder like so.
 ```php

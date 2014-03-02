@@ -21,8 +21,13 @@
 	{
 		return plugins_url().'/wordpress-factory/';
 	}
+	function assets_url()
+	{
+		return plugin_url()."assets/";
+	}
 	function dd($value)
 	{
 		var_dump($value);
 		die();
-		}
+	}
+

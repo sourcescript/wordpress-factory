@@ -6,6 +6,7 @@
 			'libs'	=> array(
 					'Core' 		=> base_path().'/../vendor/sourcescript/wf-core-framework/src',
 					'View' 		=> base_path().'/../vendor/sourcescript/wf-core-framework/src',
+					'Assets' 	=> base_path().'/../vendor/sourcescript/wf-core-framework/src',
 					'Twig'		=> base_path().'/../vendor/twig/twig/lib'
 				),
 			/*

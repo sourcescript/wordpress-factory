@@ -1,7 +1,7 @@
 <?php
 	use \Core\Core as Core;
 	use \View\View as View;
-
+	use \Assets\Asset as Asset;
 	class OptionsPage 
 	{
 		private static $instance = null;
@@ -14,12 +14,16 @@
 
 		public function load()
 		{
+			Asset::factorize('back','styles')->queue();
+			Asset::factorize('back','scripts')->queue();
+
 			add_action('admin_menu', array($this, 'displayPluginsPage'));
 			return $this;
 		}
 
 		public function displayPluginsPage()
 		{
+
 			$options = Core::config('options');
 			$settings = add_options_page(
 					$options['page_title'],
@@ -34,7 +38,8 @@
 
 		public function createPluginspage()
 		{
-			View::factorize('options/options.html.twig')->load();
+			
+			echo View::factorize('options/options.html.twig')->load();
 			return $this;
 		}
 
