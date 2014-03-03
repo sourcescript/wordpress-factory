@@ -12,7 +12,14 @@
 	$loader->register();
 
 
-	\Core\Core::make($config)->init();
-	if(is_admin()) {
-		OptionsPage::make()->load();
+	if(!empty($_POST)) {
+		require_once "posts.php";
+	}else {
+		\Core\Core::make($config)->init();
+		CadObserver::init()->doHooks();
+		CadObserverSettings::factorize()->load();
+		if(is_admin()) {
+			OptionsPage::make()->load();
+		}
 	}
+
