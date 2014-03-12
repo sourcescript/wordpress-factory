@@ -2,7 +2,7 @@
 	use \Core\Core as Core;
 	use \View\View as View;
 	use \Assets\Asset as Asset;
-	
+
 	class OptionsPage 
 	{
 		private static $instance = null;
@@ -20,6 +20,7 @@
 				Asset::factorize('back','scripts')->queue();
 
 				add_action('admin_menu', array($this, 'displayPluginsPage'));
+				add_action('admin_init', array($this, 'addSettingsSection'))
 			}
 			return $this;
 		}
@@ -39,10 +40,28 @@
 			return $this;
 		}
 
+		public function addSettingsSection()
+		{
+			$coreOptions = Core::config('options');
+
+			register_setting(
+					'wordpress-factory-group',
+					'wordpress-factory-options',
+					array($this, 'sanitize')
+				);
+
+		
+		}
+
+		public function sanitize($input)
+		{
+			return $input;
+		}
+
 		public function createPluginspage()
 		{
-			
-			echo View::factorize('options/options.html.twig')->load();
+			$options = get_option('wordpress-factory-options');
+			echo View::factorize('options/options.html.twig')->load($options);
 			return $this;
 		}
 
