@@ -2,6 +2,7 @@
 	use \Core\Core as Core;
 	use \View\View as View;
 	use \Assets\Asset as Asset;
+	
 	class OptionsPage 
 	{
 		private static $instance = null;
