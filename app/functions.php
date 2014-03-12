@@ -47,6 +47,15 @@
 		} else {
   			$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
  		}
+
+ 		if(strpos($pageURL, 'wordpress-factory=true')) {
+ 			return $pageURL;
+ 		}
+
+ 		if(strpos($pageURL, '?')) {
+ 			$pageURL .= "&wordpress-factory=true";
+ 		}else {
+ 			$pageURL .= "?wordpress-factory=true";
+ 		}
  		return $pageURL;
 	}
-
