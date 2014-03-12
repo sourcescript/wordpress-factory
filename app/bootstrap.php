@@ -15,9 +15,6 @@
 	if(!empty($_POST)) {
 		require_once "posts.php";
 	}else {
-		\Core\Core::make($config)->init();
-		if(is_admin()) {
-			OptionsPage::make()->load();
-		}
+		\Core\Core::make($config)->init()->launchHookLoaders();
 	}
 

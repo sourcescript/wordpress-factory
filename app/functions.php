@@ -3,7 +3,7 @@
 	{
 		return dirname(__FILE__);
 	}
-
+	
 	function storage_path()
 	{
 		return base_path()."/storage";

@@ -14,10 +14,12 @@
 
 		public function load()
 		{
-			Asset::factorize('back','styles')->queue();
-			Asset::factorize('back','scripts')->queue();
+			if(is_admin()) {
+				Asset::factorize('back','styles')->queue();
+				Asset::factorize('back','scripts')->queue();
 
-			add_action('admin_menu', array($this, 'displayPluginsPage'));
+				add_action('admin_menu', array($this, 'displayPluginsPage'));
+			}
 			return $this;
 		}
 
