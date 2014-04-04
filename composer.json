@@ -13,7 +13,8 @@
     },
     "autoload": {
         "classmap":[
-            "app/functions"
+            "app/functions",
+            "app/models"
         ]
     }
 }
