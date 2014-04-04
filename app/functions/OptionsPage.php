@@ -61,6 +61,11 @@
 		public function createPluginspage()
 		{
 			$options = get_option('wordpress-factory-options');
+
+			if(!$options) {
+				$options = array();
+			}
+			
 			echo View::factorize('options/options.html.twig')->load($options);
 			return $this;
 		}

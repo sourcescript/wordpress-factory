@@ -1,5 +1,5 @@
 <?php
-	if(!isset($_GET['wordpress-factory'])) {
+	if(isset($_GET['wordpress-factory'])) {
 		if(!isset($_POST['_referrer']) || !isset($_POST['_caller'])) {
 			die(); // directly dies
 			return;
