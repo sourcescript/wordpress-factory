@@ -37,7 +37,12 @@
 
 	function current_url()
 	{
-		 $pageURL = 'http';
+		return sanitized_current_url('wordpress-factory',true);
+	}
+
+	function sanitized_current_url($key = null, $value = null)
+	{
+		$pageURL = 'http';
  		if ($_SERVER["HTTPS"] == "on") {
  			$pageURL .= "s";
  		}
@@ -48,14 +53,31 @@
   			$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
  		}
 
- 		if(strpos($pageURL, 'wordpress-factory=true')) {
+ 		$curWordpressPage = "";
+
+ 		$curWordpressPage = explode("page=", $pageURL);
+ 		 
+ 		$curWordpressPage = $curWordpressPage[1];
+
+ 		$curWordpressPage = explode("&", $curWordpressPage);
+ 		$curWordpressPage = $curWordpressPage[0];
+
+ 		$pageURL = strtok($pageURL,'?');
+ 		$pageURL = $pageURL."?page=".$curWordpressPage;
+
+ 		if($key == null || $value == null) {
+
+ 			return $pageURL;
+ 		}
+
+ 		if(strpos($pageURL, $key.'='.$value)) {
  			return $pageURL;
  		}
 
  		if(strpos($pageURL, '?')) {
- 			$pageURL .= "&wordpress-factory=true";
+ 			$pageURL .=  "&".$key.'='.$value;
  		}else {
- 			$pageURL .= "?wordpress-factory=true";
+ 			$pageURL .= "?".$key.'='.$value;
  		}
  		return $pageURL;
 	}

@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"gener",
+				"generateWhere"
+			],
+			[
+				"where",
+				"whereQuery"
+			],
+			[
+				"att",
+				"attr"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
 				"co",
 				"cols	Attr"
 			],
@@ -127,11 +151,27 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "vendor/sourcescript/wf-core-framework/src/Core/Core.php",
+			"settings":
+			{
+				"buffer_size": 1864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/sourcescript/wf-core-framework/src/Core/Model.php",
+			"settings":
+			{
+				"buffer_size": 8019,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 138.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -211,7 +251,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 537.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -232,6 +272,8 @@
 	},
 	"file_history":
 	[
+		"/home/lightshire/.ssh/id_rsa",
+		"/home/lightshire/.ssh/id_rsa.pub",
 		"/var/www/taskmanagement.dev/wp-includes/date.php",
 		"/var/www/taskmanagement.dev/wp-content/plugins/wordpress-factory/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/DebugUniversalClassLoader.php",
 		"/var/www/taskmanagement.dev/wp-content/plugins/wordpress-factory/vendor/twig/twig/doc/functions/dump.rst",
@@ -357,13 +399,11 @@
 		"/var/www/disaster-app/app/views/dashboard/index.blade.php",
 		"/var/www/disaster-app/public/js/phpmyadmin/setup/frames/index.inc.php",
 		"/var/www/disaster-app/app/controllers/BarangayReportsController.php",
-		"/var/www/disaster-app/Boxfile",
-		"/var/www/disaster-app/app/controllers/ProvincialReportsController.php",
-		"/var/www/disaster-app/app/views/dashboard/nav.blade.php"
+		"/var/www/disaster-app/Boxfile"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -378,6 +418,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"112",
+			"self",
+			"protected",
+			"private",
+			"make",
 			"getAllByRegion",
 			"getAllByProvince",
 			"Provincial",
@@ -440,8 +485,76 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "vendor/sourcescript/wf-core-framework/src/Core/Core.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								395,
+								394
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "vendor/sourcescript/wf-core-framework/src/Core/Model.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2042,
+								2042
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 948.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -462,11 +575,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1017,7 +1137,7 @@
 		[
 			[
 				"",
-				"/var/www/hourfamily/hourfamily.sublime-project"
+				"/var/www/disaster-app/disaster-app.sublime-project"
 			],
 			[
 				"dias",
@@ -1052,7 +1172,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 331.0,
 	"status_bar_visible": true,
 	"template_settings":

@@ -134,22 +134,6 @@
 				"buffer_size": 335,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "app/functions/OptionsPage.php",
-			"settings":
-			{
-				"buffer_size": 1382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "composer.json",
-			"settings":
-			{
-				"buffer_size": 442,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -256,6 +240,8 @@
 	},
 	"file_history":
 	[
+		"/home/lightshire/projects/wordpress-factory/app/functions/OptionsPage.php",
+		"/home/lightshire/projects/wordpress-factory/composer.json",
 		"/home/lightshire/projects/wordpress-factory/assets/js/observer.js",
 		"/var/www/taskmanagement.dev/wp-includes/date.php",
 		"/var/www/taskmanagement.dev/wp-content/plugins/wordpress-factory/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/DebugUniversalClassLoader.php",
@@ -381,9 +367,7 @@
 		"/var/www/disaster-app/app/controllers/IndexController.php",
 		"/var/www/disaster-app/app/views/dashboard/index.blade.php",
 		"/var/www/disaster-app/public/js/phpmyadmin/setup/frames/index.inc.php",
-		"/var/www/disaster-app/app/controllers/BarangayReportsController.php",
-		"/var/www/disaster-app/Boxfile",
-		"/var/www/disaster-app/app/controllers/ProvincialReportsController.php"
+		"/var/www/disaster-app/app/controllers/BarangayReportsController.php"
 	],
 	"find":
 	{
@@ -464,7 +448,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -480,8 +464,8 @@
 						"selection":
 						[
 							[
-								281,
-								281
+								159,
+								159
 							]
 						],
 						"settings":
@@ -491,71 +475,6 @@
 							"synced": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/functions/OptionsPage.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								833,
-								833
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 510.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "composer.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								442,
-								442
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -617,6 +536,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"compos",
+				"composer.json"
+			],
 			[
 				"options",
 				"app/functions/OptionsPage.php"
@@ -1124,10 +1047,6 @@
 			[
 				"search.",
 				"app/views/index/search.blade.php"
-			],
-			[
-				"/api/",
-				"app/views/api/reports.blade.php"
 			]
 		],
 		"width": 0.0
