@@ -56,7 +56,6 @@
  		$curWordpressPage = "";
 
  		$curWordpressPage = explode("page=", $pageURL);
- 		 
  		$curWordpressPage = $curWordpressPage[1];
 
  		$curWordpressPage = explode("&", $curWordpressPage);
