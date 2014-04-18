@@ -3,7 +3,7 @@
 	use \View\View as View;
 	use \Assets\Asset as Asset;
 
-	class OptionsPage 
+	class OptionsPage implements \Core\Page
 	{
 		private static $instance = null;
 
