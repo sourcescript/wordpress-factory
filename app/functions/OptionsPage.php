@@ -20,7 +20,7 @@
 				Asset::factorize('back','scripts')->queue();
 
 				add_action('admin_menu', array($this, 'displayPluginsPage'));
-				add_action('admin_init', array($this, 'addSettingsSection'))
+				add_action('admin_init', array($this, 'addSettingsSection'));
 			}
 			return $this;
 		}
