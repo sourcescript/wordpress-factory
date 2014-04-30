@@ -15,10 +15,10 @@
 			 * Since every plugin requires an options page, the title shall be added here
 			 */
 			'options' 	=> array(
-					'page_title' 	=> 'Members Settings',
-					'menu_title' 	=> 'Members Settings',
+					'page_title' 	=> 'Wordpress Factory',
+					'menu_title' 	=> 'Wordpress Factory',
 					'capability' 	=> 'manage_options',
-					'menu_slug' 	=> 'cupas-members-settings'
+					'menu_slug' 	=> 'wordpress-factory-settings'
 				),
 
 			/*
