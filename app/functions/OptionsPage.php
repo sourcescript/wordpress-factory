@@ -25,6 +25,11 @@
 			return $this;
 		}
 
+		public static function post()
+		{
+			
+		}
+
 		public function displayPluginsPage()
 		{
 
