@@ -11,10 +11,5 @@
 	$loader->registerNamespaces($config['libs']);
 	$loader->register();
 
-
-	if(!empty($_POST)) {
-		require_once "posts.php";
-	}else {
-		\Core\Core::make($config)->init()->launchHookLoaders();
-	}
+	\Core\Core::make($config)->init()->launchHookLoaders();
 
